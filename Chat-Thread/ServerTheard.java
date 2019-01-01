@@ -31,7 +31,7 @@ public class ServerTheard extends Thread {
 			name=in.readUTF();
 			sendMassege(name+"connected");	
 		}catch(IOException e) {
-
+			e.printStackTrace();
 		}
 		while(!exit) {
 			try {
@@ -44,7 +44,8 @@ public class ServerTheard extends Thread {
 				else {
 					sendMassege("-"+name+"write"+massege);
 				}
-			}catch(IOException e) {	
+			}catch(IOException e) {
+				e.printStackTrace();	
 			}
 		}
 	}
@@ -58,7 +59,7 @@ public class ServerTheard extends Thread {
 			}
 
 		}catch(IOException e) {
-
+			e.printStackTrace();
 		}
 
 	}
