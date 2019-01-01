@@ -19,7 +19,7 @@ public class Client {
 			c1.start();
 			ou.writeUTF(name);
 		}catch(IOException e) {
-			System.out.println("Enter text");
+			e.printStackTrace();
 		}
 		while(!end) {
 			try {
@@ -29,6 +29,7 @@ public class Client {
 					end=true;
 				}
 			}catch(IOException e) {
+				e.printStackTrace();
 				System.out.println("error loop");
 			}
 		}
