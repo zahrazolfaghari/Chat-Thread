@@ -21,7 +21,7 @@ public class ClientThread extends Thread {
 			while(!end) {
 				message=in.readUTF();
 				System.out.println(message);
-				if(message.equalsIgnoreCase("- "+name+"disconected")) {
+				if(message.equalsIgnoreCase(" -  "+name+"  disconected")) {
 					end=true;
 				}
 			}
